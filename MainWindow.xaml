@@ -4,25 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PoeSyndicateBrowser"
-        xmlns:view="clr-namespace:PoeSyndicateBrowser.View"
         mc:Ignorable="d"
         Title="MainWindow"
         
-        Height="800" Width="1100"
+        Height="450" Width="800"
         
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{StaticResource MaterialDesignFont}"  
+        
         >
-  
-        <!--Height="450" Width="800"-->
 
   <Grid>
-    <view:MainView/>
+
+    <Label Content="ID" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="70,20,0,0" TextWrapping="Wrap" Text="{Binding TestModel.ID}" VerticalAlignment="Top" Width="120"/>
+    <Label Content="Name" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top"/>
+    <TextBox HorizontalAlignment="Left" Height="23" Margin="70,50,0,0" TextWrapping="Wrap" Text="{Binding TestModel.Name}" VerticalAlignment="Top" Width="120"/>
+    <Button Content="Save" HorizontalAlignment="Left" Margin="205,20,0,0" VerticalAlignment="Top" Width="70" Height="53" Command="{Binding SaveTestModelCommand}"/>
+
+    <TextBlock HorizontalAlignment="Left" Margin="20,100,0,0" TextWrapping="Wrap" Text="{Binding TestModel.ID}" VerticalAlignment="Top" Width="120" Height="20"/>
+    <TextBlock HorizontalAlignment="Left" Margin="20,130,0,0" TextWrapping="Wrap" Text="{Binding TestModel.Name}" VerticalAlignment="Top" Width="120" Height="20"/>
+
   </Grid>
 
 </Window>
