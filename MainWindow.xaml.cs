@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Diagnostics;
+
 namespace PoeSyndicateBrowser
 {
     /// <summary>
@@ -20,10 +22,26 @@ namespace PoeSyndicateBrowser
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void WindowContentRendered(object sender, EventArgs e)
+        {
+            Button TestButton = (Button)MemberHeaderControl.Template.FindName("TestButton", MemberHeaderControl);
+            TestButton.Click += TestButtonClick;
+        }
+
+        private void TestButtonClick(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("- TestButtonClick()");
+
+            MemberControl.TestConnection();
+        }
+
     }
+
+
 }

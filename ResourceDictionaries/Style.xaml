@@ -1,0 +1,217 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+  
+  <!-- 리소스 -->
+  <!-- Common -->
+  <GridLength x:Key="MemberImageRowHeight">100</GridLength>
+  <GridLength x:Key="RecommendRowHeight">36</GridLength>
+  
+  <GridLength x:Key="BetweenMemberAndRewardRowHeight">12</GridLength>
+  
+  <GridLength x:Key="RewardImageRowHeight">48</GridLength>
+  <GridLength x:Key="RewardInfoRowHeight">36</GridLength>
+  <GridLength x:Key="RewardPriceRowHeight">36</GridLength>
+  
+  <GridLength x:Key="BetweenRewardsRowHeight">6</GridLength>
+  
+  <Thickness x:Key="BorderThickness">1</Thickness>
+  
+  <SolidColorBrush x:Key="BorderBrushColor" Color="Gray"/>
+  <!-- Common //-->
+
+  <!-- Header -->
+  <GridLength x:Key="HeaderColWidth">66</GridLength>
+
+  <Thickness x:Key="HeaderRecommendMargin">0 0 4 0</Thickness>
+  <Thickness x:Key="HeaderRecommendCaptainMargin">0 0 4 0</Thickness>
+  
+  <SolidColorBrush x:Key="HeaderRecommendFontColor" Color="LightGray"/>
+  <SolidColorBrush x:Key="HeaderRecommendCaptainFontColor" Color="LightGray"/>
+  <SolidColorBrush x:Key="HeaderPositionKorFontColor" Color="LightGray"/>
+  <SolidColorBrush x:Key="HeaderPositionEngFontColor" Color="LightGray"/>
+  <SolidColorBrush x:Key="HeaderDefaultBackground" Color="#FF303030"/>
+  <SolidColorBrush x:Key="HeaderRewardDefaultBackground" Color="#FF303030"/>
+
+  <FontWeight x:Key="HeaderRecommendFontWeight">Bold</FontWeight>
+  <FontWeight x:Key="HeaderRecommendCaptainFontWeight">Bold</FontWeight>
+  <FontWeight x:Key="HeaderPositionKorFontWeight">Bold</FontWeight>
+  <FontWeight x:Key="HeaderPositionEngFontWeight">Bold</FontWeight>
+  
+  <HorizontalAlignment x:Key="HeaderRecommendHorizontal">Right</HorizontalAlignment>
+  <HorizontalAlignment x:Key="HeaderRecommendCaptainHorizontal">Right</HorizontalAlignment>
+  <HorizontalAlignment x:Key="HeaderPositionKorHorizontal">Center</HorizontalAlignment>
+  <HorizontalAlignment x:Key="HeaderPositionEngHorizontal">Center</HorizontalAlignment>
+  
+  <System:Double x:Key="HeaderPositionKorFontSize">22</System:Double>
+  <System:Double x:Key="HeaderPositionEngFontSize">22</System:Double>
+  <System:Double x:Key="HeaderPositionEngFontSize2">12</System:Double>
+
+  <System:String x:Key="HeaderRecommendText">추천 ▶</System:String>
+  <System:String x:Key="HeaderRecommendCaptainText">대장 추천 ▶</System:String>
+  <System:String x:Key="HeaderTransportationKorText">수송</System:String>
+  <System:String x:Key="HeaderTransportationEngText">T</System:String>
+  <System:String x:Key="HeaderFortificationKorText">방어</System:String>
+  <System:String x:Key="HeaderFortificationEngText">F</System:String>
+  <System:String x:Key="HeaderResearchKorText">연구</System:String>
+  <System:String x:Key="HeaderResearchEngText">R</System:String>
+  <System:String x:Key="HeaderInterventionKorText">조정</System:String>
+  <System:String x:Key="HeaderInterventionEngText">I</System:String>
+  <System:String x:Key="HeaderInterventionKorText2">(개입)</System:String>
+  <!-- Header //-->
+  <!-- 리소스 //-->
+  
+  <!-- 스타일 -->
+  <!-- 헤더 -->
+  <Style x:Key="MemberHeaderGrid" TargetType="UserControl">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="UserControl">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="{StaticResource MemberImageRowHeight}" />
+              <RowDefinition Height="{StaticResource RecommendRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource BetweenMemberAndRewardRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+              
+              <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+              <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="{StaticResource HeaderColWidth}" />
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderDefaultBackground}">
+
+              <Button Name="TestButton" Content="테스트" />
+
+            </Border>
+
+            <Border Grid.Row="1"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderDefaultBackground}">
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{StaticResource HeaderRecommendText}"
+                           FontWeight="{StaticResource HeaderRecommendFontWeight}"
+                           Foreground="{StaticResource HeaderRecommendFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderRecommendHorizontal}"
+                           Margin="{StaticResource HeaderRecommendMargin}"  />
+                <TextBlock Text="{StaticResource HeaderRecommendCaptainText}"
+                           FontWeight="{StaticResource HeaderRecommendCaptainFontWeight}"
+                           Foreground="{StaticResource HeaderRecommendCaptainFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderRecommendCaptainHorizontal}"
+                           Margin="{StaticResource HeaderRecommendCaptainMargin}" />
+              </StackPanel>
+            </Border>
+
+            <Border Grid.Row="3"
+                    Grid.RowSpan="3"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderRewardDefaultBackground}">
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{StaticResource HeaderTransportationKorText}"
+                           FontSize="{StaticResource HeaderPositionKorFontSize}"
+                           FontWeight="{StaticResource HeaderPositionKorFontWeight}"
+                           Foreground="{StaticResource HeaderPositionKorFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionKorHorizontal}" />
+                <TextBlock Text="{StaticResource HeaderTransportationEngText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+              </StackPanel>
+            </Border>
+
+            <Border Grid.Row="7"
+                    Grid.RowSpan="3"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderRewardDefaultBackground}">
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{StaticResource HeaderFortificationKorText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+                <TextBlock Text="{StaticResource HeaderFortificationEngText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+              </StackPanel>
+            </Border>
+
+            <Border Grid.Row="11"
+                    Grid.RowSpan="3"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderRewardDefaultBackground}">
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{StaticResource HeaderResearchKorText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+                <TextBlock Text="{StaticResource HeaderResearchEngText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+              </StackPanel>
+            </Border>
+
+            <Border Grid.Row="15"
+                    Grid.RowSpan="3"
+                    BorderBrush="{StaticResource BorderBrushColor}" 
+                    BorderThickness="{StaticResource BorderThickness}"
+                    Background="{StaticResource HeaderRewardDefaultBackground}">
+              <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="{StaticResource HeaderInterventionKorText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+                <TextBlock Text="{StaticResource HeaderInterventionKorText2}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize2}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+                <TextBlock Text="{StaticResource HeaderInterventionEngText}"
+                           FontSize="{StaticResource HeaderPositionEngFontSize}"
+                           FontWeight="{StaticResource HeaderPositionEngFontWeight}"
+                           Foreground="{StaticResource HeaderPositionEngFontColor}"
+                           HorizontalAlignment="{StaticResource HeaderPositionEngHorizontal}" />
+              </StackPanel>
+            </Border>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <!-- 헤더 //-->
+  <!-- 스타일 //-->
+
+</ResourceDictionary>

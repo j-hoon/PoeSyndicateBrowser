@@ -5,21 +5,20 @@
              StartupUri="MainWindow.xaml" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              d1p1:Ignorable="d" 
-             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:PoeSyndicateBrowser.ViewModel"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
   
   <Application.Resources>
 
     <ResourceDictionary>
       
-      <!-- MvvmLight - ServiceLocator -->
-      <!--<vm:ViewModelLocator xmlns:vm="clr-namespace:PoeSyndicateBrowser.ViewModel" x:Key="ViewModelLocator" />-->
-      <!--<vm:ViewModelLocator x:Key="ViewModelLocator" />-->
-      
+      <!-- Custom Style -->
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ResourceDictionaries/Style.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+
     </ResourceDictionary>
 
-    
+
   </Application.Resources>
-  
+
 </Application>

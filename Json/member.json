@@ -1,0 +1,888 @@
+{
+  "member": [
+    {
+      "id": 0,
+      "grade": 1,
+      "image": "vorici.png",
+      "korName": "보리치",
+      "engName": "Vorici",
+      "recommend": "RI",
+      "recommendCaptain": "R",
+      "transportation": {
+        "isHighlight": false,
+        "image": "vorici-t.png",
+        "info": "퀄리티 젬",
+        "detailInfo": "퀄리티 20%",
+        "detailFlag": 1,
+        "detailType": "GemQuality",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "vorici-f.png",
+        "info": "홈 관련 화폐",
+        "detailInfo": "연결/쥬얼/색채",
+        "detailFlag": 4,
+        "detailType": "Currency",
+        "detailItems": [
+          "Orb of Fusing",
+          "Jeweller's Orb",
+          "Chromatic Orb"
+        ]
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "vorici-r.png",
+        "info": "흰색 소켓",
+        "detailInfo": "",
+        "detailFlag": 1,
+        "detailType": "WhiteSocketItem",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "vorici-i.png",
+        "info": "쉐이퍼 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Shaper Scarab",
+          "Polished Shaper Scarab",
+          "Rusted Shaper Scarab"
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "grade": 1,
+      "image": "it-that-fled.png",
+      "korName": "달아난 그것",
+      "engName": "It That Fled",
+      "recommend": "R",
+      "recommendCaptain": "R",
+      "transportation": {
+        "isHighlight": false,
+        "image": "it-that-fled-t.png",
+        "info": "균열 조각",
+        "detailInfo": "조각 1/2/3/4",
+        "detailFlag": 2,
+        "detailType": "Currency",
+        "detailItems": [
+          "Splinter of Chayula",
+          "Splinter of Uul-Netol",
+          "Splinter of Tul",
+          "Splinter of Xoph",
+          "Splinter of Esh"
+        ]
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "it-that-fled-f.png",
+        "info": "심연 주얼",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "AbyssJewel",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "it-that-fled-r.png",
+        "info": "균열석 강화",
+        "detailInfo": "순수/풍부/충전",
+        "detailFlag": 1,
+        "detailType": "Fragment",
+        "detailItems": [
+          "Chayula's Pure Breachstone",
+          "Chayula's Enriched Breachstone",
+          "Chayula's Charged Breachstone",
+          "Chayula's Breachstone",
+          "Uul-Netol's Pure Breacstone",
+          "Uul-Netol's Enriched Breacstone",
+          "Uul-Netol's Charged Breachstone",
+          "Uul-Netol's Breachstone",
+          "Tul's Pure Breachstone",
+          "Tul's Enriched Breachstone",
+          "Tul's Charged Breachstone",
+          "Tul's Breachstone",
+          "Esh's Pure Breachstone",
+          "Esh's Enriched Breachstone",
+          "Esh's Charged Breachstone",
+          "Esh's Breachstone",
+          "Xoph's Pure Breachstone",
+          "Xoph's Enriched Breachstone",
+          "Xoph's Charged Breachstone",
+          "Xoph's Breachstone"
+        ]
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "it-that-fled-i.png",
+        "info": "균열 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Breach Scarab",
+          "Polished Breach Scarab",
+          "Rusted Breach Scarab"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "grade": 1,
+      "image": "tora.png",
+      "korName": "토라",
+      "engName": "Tora",
+      "recommend": "R",
+      "recommendCaptain": "R",
+      "transportation": {
+        "isHighlight": false,
+        "image": "tora-t.png",
+        "info": "장막 아이템 선택",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "Item",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "tora-f.png",
+        "info": "인챈트 아이템",
+        "detailInfo": "",
+        "detailFlag": -1,
+        "detailType": "EnchantItem",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "tora-r.png",
+        "info": "젬 경험치",
+        "detailInfo": "20 레벨",
+        "detailFlag": 1,
+        "detailType": "GemLevel",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "tora-i.png",
+        "info": "선구자 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Harbinger Scarab",
+          "Polished Harbinger Scarab",
+          "Rusted Harbinger Scarab"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "grade": 1,
+      "image": "rin.png",
+      "korName": "린",
+      "engName": "Rin",
+      "recommend": "I",
+      "recommendCaptain": "I",
+      "transportation": {
+        "isHighlight": false,
+        "image": "rin-t.png",
+        "info": "일반 지도",
+        "detailInfo": "1~15등급 지도",
+        "detailFlag": 3,
+        "detailType": "Map",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "rin-f.png",
+        "info": "희귀 지도",
+        "detailInfo": "1~15등급 지도",
+        "detailFlag": 3,
+        "detailType": "Map",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "rin-r.png",
+        "info": "고유 지도",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "UniqueMap",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "rin-i.png",
+        "info": "지도 제작 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Cartography Scarab",
+          "Polished Cartography Scarab",
+          "Rusted Cartography Scarab"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "grade": 1,
+      "image": "cameria.png",
+      "korName": "카메리아",
+      "engName": "Cameria",
+      "recommend": "IFT",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": true,
+        "image": "cameria-t.png",
+        "info": "과거 리그 아이템",
+        "detailInfo": "",
+        "detailFlag": -1,
+        "detailType": "PastLeagueItem",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "cameria-f.png",
+        "info": "선구자의 오브",
+        "detailInfo": "",
+        "detailFlag": 0,
+        "detailType": "Currency",
+        "detailItems": [
+          "Harbinger's Orb"
+        ]
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "cameria-r.png",
+        "info": "육분의",
+        "detailInfo": "대가/숙련/수습",
+        "detailFlag": 4,
+        "detailType": "Currency",
+        "detailItems": [
+          "Master Cartographer's Sextant",
+          "Journeyman Cartographer's Sextant",
+          "Apprentice Cartographer's Sextant"
+        ]
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "cameria-i.png",
+        "info": "아황산염 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Sulphite Scarab",
+          "Polished Sulphite Scarab",
+          "Rusted Sulphite Scarab"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "grade": 1,
+      "image": "vagan.png",
+      "korName": "베이건",
+      "engName": "Vagan",
+      "recommend": "RIF",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "vagan-t.png",
+        "info": "군단 조각",
+        "detailInfo": "5종",
+        "detailFlag": 3,
+        "detailType": "Fragment",
+        "detailItems": [
+          "Timeless Maraketh Splinter",
+          "Timeless Templar Splinter",
+          "Timeless Eternal Empire Splinter",
+          "Timeless Vaal Splinter",
+          "Timeless Karui Splinter"
+        ]
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "vagan-f.png",
+        "info": "군단 상자",
+        "detailInfo": "",
+        "detailFlag": -1,
+        "detailType": "",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "vagan-r.png",
+        "info": "인큐베이터",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "Incubator",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "vagan-i.png",
+        "info": "군단 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Legion Scarab",
+          "Polished Legion Scarab",
+          "Rusted Legion Scarab"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "grade": 2,
+      "image": "aisling.png",
+      "korName": "아이슬링",
+      "engName": "Aisling",
+      "recommend": "R",
+      "recommendCaptain": "R",
+      "transportation": {
+        "isHighlight": false,
+        "image": "aisling-t.png",
+        "info": "장막 무기",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "VeiledWeapon",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "aisling-f.png",
+        "info": "장막 방어구",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "VeiledArmour",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "aisling-r.png",
+        "info": "장막 옵션 추가",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "VeiledOption",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "aisling-i.png",
+        "info": "장막 액세서리",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "VeiledAccessory",
+        "detailItems": []
+      }
+    },
+    {
+      "id": 7,
+      "grade": 2,
+      "image": "janus.png",
+      "korName": "야누스",
+      "engName": "Janus",
+      "recommend": "FR",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "janus-t.png",
+        "info": "퀄리티 화폐",
+        "detailInfo": "세공사/기술자",
+        "detailFlag": 4,
+        "detailType": "Currency",
+        "detailItems": [
+          "Gemcutter's Prism",
+          "Engineer's Orb"
+        ]
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "janus-f.png",
+        "info": "화폐 파편",
+        "detailInfo": "거울/엑잘/소멸",
+        "detailFlag": 4,
+        "detailType": "Currency",
+        "detailItems": [
+          "Mirror Shard",
+          "Exalted Shard",
+          "Annulment Shard"
+        ]
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "janus-r.png",
+        "info": "페란두스 코인",
+        "detailInfo": "(카디로)",
+        "detailFlag": 4,
+        "detailType": "Currency",
+        "detailItems": [
+          "Perandus Coin"
+        ]
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "janus-i.png",
+        "info": "페란두스 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Perandus Scarab",
+          "Polished Perandus Scarab",
+          "Rusted Perandus Scarab"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "grade": 2,
+      "image": "jorgin.png",
+      "korName": "요르긴",
+      "engName": "Jorgin",
+      "recommend": "R",
+      "recommendCaptain": "R",
+      "transportation": {
+        "isHighlight": false,
+        "image": "jorgin-t.png",
+        "info": "부적",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "Talisman",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "jorgin-f.png",
+        "info": "야수 아이템",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "BestiaryItem",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "jorgin-r.png",
+        "info": "야수 크래프팅",
+        "detailInfo": "제공 정보 없음",
+        "detailFlag": -1,
+        "detailType": "BestiaryCrafting",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "jorgin-i.png",
+        "info": "야수 도감 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Bestiary Scarab",
+          "Polished Bestiary Scarab",
+          "Rusted Bestiary Scarab"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "grade": 2,
+      "image": "korell.png",
+      "korName": "코렐",
+      "engName": "Korell",
+      "recommend": "RF",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "korell-t.png",
+        "info": "에센스",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "Essence",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "korell-f.png",
+        "info": "지도 조각",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "Fragment",
+        "detailItems": [
+          "Mortal Grief",
+          "Mortal Ignorance",
+          "Mortal Rage",
+          "Mortal Hope",
+          "Fragment of the Hydra",
+          "Fragment of the Chimera",
+          "Fragment of the Phoenix",
+          "Fragment of the Minotaur",
+          "Sacrifice at Dusk",
+          "Sacrifice at Noon",
+          "Sacrifice at Midnight",
+          "Sacrifice at Dawn"
+        ]
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "korell-r.png",
+        "info": "화석",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "Fossil",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "korell-i.png",
+        "info": "엘더 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Elder Scarab",
+          "Polished Elder Scarab",
+          "Rusted Elder Scarab"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "grade": 2,
+      "image": "leo.png",
+      "korName": "레오",
+      "engName": "Leo",
+      "recommend": "FR",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "leo-t.png",
+        "info": "실버 코인",
+        "detailInfo": "",
+        "detailFlag": 0,
+        "detailType": "Currency",
+        "detailItems": [
+          "Silver Coin"
+        ]
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "leo-f.png",
+        "info": "화폐 상자",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "Currency",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": true,
+        "image": "leo-r.png",
+        "info": "화폐 크래프팅",
+        "detailInfo": "(제작대)",
+        "detailFlag": 1,
+        "detailType": "Crafting",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "leo-i.png",
+        "info": "고통 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Torment Scarab",
+          "Polished Torment Scarab",
+          "Rusted Torment Scarab"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "grade": 2,
+      "image": "gravicius.png",
+      "korName": "그라비시우스",
+      "engName": "Gravicius",
+      "recommend": "TI",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": true,
+        "image": "gravicius-t.png",
+        "info": "점술 카드 세트",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "DivinationCardSet",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "gravicius-f.png",
+        "info": "무작위 점술 카드",
+        "detailInfo": "",
+        "detailFlag": 3,
+        "detailType": "DivinationCard",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "gravicius-r.png",
+        "info": "점술 카드 교환",
+        "detailInfo": "",
+        "detailFlag": -1,
+        "detailType": "DivinationCard",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "gravicius-i.png",
+        "info": "점술 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Divination Scarab",
+          "Polished Divination Scarab",
+          "Rusted Divination Scarab"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "grade": 2,
+      "image": "hillock.png",
+      "korName": "힐록",
+      "engName": "Hillock",
+      "recommend": "TF",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": true,
+        "image": "hillock-t.png",
+        "info": "무기 퀄리티",
+        "detailInfo": "28/26/24%",
+        "detailFlag": -1,
+        "detailType": "WeaponQuality",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": true,
+        "image": "hillock-f.png",
+        "info": "방어구 퀄리티",
+        "detailInfo": "28/26/24%",
+        "detailFlag": -1,
+        "detailType": "ArmourQuality",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "hillock-r.png",
+        "info": "플라스크 퀄리티",
+        "detailInfo": "28/26/24%",
+        "detailFlag": -1,
+        "detailType": "FlaskQuality",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "hillock-i.png",
+        "info": "지도 퀄리티",
+        "detailInfo": "28/26/24%",
+        "detailFlag": -1,
+        "detailType": "MapQuality",
+        "detailItems": []
+      }
+    },
+    {
+      "id": 13,
+      "grade": 3,
+      "image": "riker.png",
+      "korName": "라이커",
+      "engName": "Riker",
+      "recommend": "TI",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": true,
+        "image": "riker-t.png",
+        "info": "화폐 선택",
+        "detailInfo": "(시간제한)",
+        "detailFlag": -1,
+        "detailType": "Currency",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "riker-f.png",
+        "info": "고유 아이템 선택",
+        "detailInfo": "(시간제한)",
+        "detailFlag": -1,
+        "detailType": "UniqueItem",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "riker-r.png",
+        "info": "장막 아이템 선택",
+        "detailInfo": "(시간제한)",
+        "detailFlag": -1,
+        "detailType": "VeiledItem",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "riker-i.png",
+        "info": "점술 카드 선택",
+        "detailInfo": "(시간제한)",
+        "detailFlag": 3,
+        "detailType": "DivinationCard",
+        "detailItems": []
+      }
+    },
+    {
+      "id": 14,
+      "grade": 3,
+      "image": "haku.png",
+      "korName": "하쿠",
+      "engName": "Haku",
+      "recommend": "I",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "haku-t.png",
+        "info": "희귀 아이템",
+        "detailInfo": "(무작위)",
+        "detailFlag": -1,
+        "detailType": "RareItem",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "haku-f.png",
+        "info": "금고",
+        "detailInfo": "(무작위)",
+        "detailFlag": -1,
+        "detailType": "Strongbox",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "haku-r.png",
+        "info": "희귀 아이템",
+        "detailInfo": "(퀄리티 무작위)",
+        "detailFlag": -1,
+        "detailType": "QualityRareItem",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": true,
+        "image": "haku-i.png",
+        "info": "매복 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Ambush Scarab",
+          "Polished Ambush Scarab",
+          "Rusted Ambush Scarab"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "grade": 3,
+      "image": "guff.png",
+      "korName": "거프",
+      "engName": "Guff",
+      "recommend": "T",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": true,
+        "image": "guff-t.png",
+        "info": "시간제한 크래프팅",
+        "detailInfo": "(카오스 오브)",
+        "detailFlag": -1,
+        "detailType": "ChaosCrafting",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "guff-f.png",
+        "info": "시간제한 크래프팅",
+        "detailInfo": "(에센스)",
+        "detailFlag": -1,
+        "detailType": "EssenceCrafting",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "guff-r.png",
+        "info": "시간제한 크래프팅",
+        "detailInfo": "(엑잘/소멸)",
+        "detailFlag": -1,
+        "detailType": "ExaltedCrafting",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "guff-i.png",
+        "info": "시간제한 크래프팅",
+        "detailInfo": "(변화의 오브)",
+        "detailFlag": -1,
+        "detailType": "AlterationCrafting",
+        "detailItems": []
+      }
+    },
+    {
+      "id": 16,
+      "grade": 3,
+      "image": "elreon.png",
+      "korName": "엘레온",
+      "engName": "Elreon",
+      "recommend": "",
+      "recommendCaptain": "",
+      "transportation": {
+        "isHighlight": false,
+        "image": "elreon-t.png",
+        "info": "고유 무기",
+        "detailInfo": "(무작위)",
+        "detailFlag": -1,
+        "detailType": "UniqueWeapon",
+        "detailItems": []
+      },
+      "fortification": {
+        "isHighlight": false,
+        "image": "elreon-f.png",
+        "info": "고유 방어구",
+        "detailInfo": "(무작위)",
+        "detailFlag": -1,
+        "detailType": "UniqueArmour",
+        "detailItems": []
+      },
+      "research": {
+        "isHighlight": false,
+        "image": "elreon-r.png",
+        "info": "고유 액세서리",
+        "detailInfo": "(무작위)",
+        "detailFlag": -1,
+        "detailType": "UniqueAccessory",
+        "detailItems": []
+      },
+      "intervention": {
+        "isHighlight": false,
+        "image": "elreon-i.png",
+        "info": "성유물 보관실 갑충석",
+        "detailInfo": "도금/광택/녹슨",
+        "detailFlag": 4,
+        "detailType": "Scarab",
+        "detailItems": [
+          "Gilded Reliquary Scarab",
+          "Polished Reliquary Scarab",
+          "Rusted Reliquary Scarab"
+        ]
+      }
+    }
+  ]
+}

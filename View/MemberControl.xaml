@@ -1,0 +1,453 @@
+﻿<UserControl x:Class="PoeSyndicateBrowser.View.MemberControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d">
+
+  <!-- Resources -->
+  <UserControl.Resources>
+    <!-- Property -->
+    <GridLength x:Key="MemberColWidth">74</GridLength>
+
+    <SolidColorBrush x:Key="FirstGradeMemberBackground" Color="LightGreen"/>
+    <SolidColorBrush x:Key="SecondGradeMemberBackground" Color="LightSkyBlue"/>
+    <SolidColorBrush x:Key="ThirdGradeMemberBackground" Color="LightCoral"/>
+    <SolidColorBrush x:Key="MemberRecommendBackground" Color="LightGray"/>
+    <SolidColorBrush x:Key="MemberRewardDefaultBackground" Color="#FF303030"/>
+    <SolidColorBrush x:Key="MemberRewardHighlightBackground" Color="LightGreen"/>
+
+    <SolidColorBrush x:Key="MemberRewardInfoDefaultFontColor" Color="White"/>
+    <SolidColorBrush x:Key="MemberRewardDetailInfoDefaultFontColor" Color="White"/>
+    <SolidColorBrush x:Key="MemberRewardPriceInfoDefaultFontColor" Color="White"/>
+    <SolidColorBrush x:Key="MemberRewardInfoHighlightFontColor" Color="#FF6F116F"/>
+    <SolidColorBrush x:Key="MemberRewardDetailInfoHighlightFontColor" Color="#FF6F116F"/>
+    <SolidColorBrush x:Key="MemberRewardPriceInfoHighlightFontColor" Color="#FF6F116F"/>
+    <SolidColorBrush x:Key="MemberRecommendFontColor" Color="DarkBlue"/>
+    <SolidColorBrush x:Key="MemberRecommendCaptainFontColor" Color="DarkBlue"/>
+
+    <System:Double x:Key="MemberKorNameFontSize">12</System:Double>
+    <System:Double x:Key="MemberEngNameFontSize">12</System:Double>
+    <System:Double x:Key="MemberRecommendFontSize">11</System:Double>
+    <System:Double x:Key="MemberRecommendCaptainFontSize">11</System:Double>
+    
+    <FontWeight x:Key="MemberKorNameFontWeight">Bold</FontWeight>
+    <FontWeight x:Key="MemberRecommendFontWeight">Bold</FontWeight>
+    <FontWeight x:Key="MemberRecommendCaptainFontWeight">Bold</FontWeight>
+    <FontWeight x:Key="MemberRewardInfoHighlightFontWeight">Bold</FontWeight>
+    <FontWeight x:Key="MemberRewardDetailInfoHighlightFontWeight">Bold</FontWeight>
+    <FontWeight x:Key="MemberRewardPriceInfoHighlightFontWeight">Bold</FontWeight>
+
+    <HorizontalAlignment x:Key="MemberNameHorizontal">Center</HorizontalAlignment>
+    <HorizontalAlignment x:Key="MemberRecommendHorizontal">Center</HorizontalAlignment>
+    <HorizontalAlignment x:Key="MemberRecommendCaptainHorizontal">Center</HorizontalAlignment>
+    <HorizontalAlignment x:Key="MemberRewardInfoHorizontal">Center</HorizontalAlignment>
+    <HorizontalAlignment x:Key="MemberRewardDetailInfoHorizontal">Center</HorizontalAlignment>
+    <HorizontalAlignment x:Key="MemberRewardPriceInfoHorizontal">Center</HorizontalAlignment>
+
+    <VerticalAlignment x:Key="MemberRewardInfoVertical">Center</VerticalAlignment>
+    <VerticalAlignment x:Key="MemberRewardDetailInfoVertical">Center</VerticalAlignment>
+    <VerticalAlignment x:Key="MemberRewardPriceInfoVertical">Center</VerticalAlignment>
+
+    <TextAlignment x:Key="MemberRewardInfoTextAlignment">Center</TextAlignment>
+    <TextAlignment x:Key="MemberRewardDetailInfoTextAlignment">Center</TextAlignment>
+    <TextAlignment x:Key="MemberRewardPriceInfoTextAlignment">Center</TextAlignment>
+
+    <TextWrapping x:Key="MemberRewardInfoTextWrapping">WrapWithOverflow</TextWrapping>
+    <TextWrapping x:Key="MemberRewardDetailInfoTextWrapping">WrapWithOverflow</TextWrapping>
+    <TextWrapping x:Key="MemberRewardPriceInfoTextWrapping">WrapWithOverflow</TextWrapping>
+    
+    <System:Double x:Key="MemberImageWidth">64</System:Double>
+    <System:Double x:Key="MemberImageHeight">64</System:Double>
+    <System:Double x:Key="MemberRewardImageWidth">36</System:Double>
+    <System:Double x:Key="MemberRewardImageHeight">36</System:Double>
+    <!-- Property //-->
+
+    <!-- Style -->
+    <Style x:Key="MemberBorder" TargetType="Border">
+      <Setter Property="BorderBrush" Value="{StaticResource BorderBrushColor}" />
+      <Setter Property="BorderThickness" Value="{StaticResource BorderThickness}" />
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding Grade}" Value="1">
+          <Setter Property="Background" Value="{StaticResource FirstGradeMemberBackground}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding Grade}" Value="2">
+          <Setter Property="Background" Value="{StaticResource SecondGradeMemberBackground}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding Grade}" Value="3">
+          <Setter Property="Background" Value="{StaticResource ThirdGradeMemberBackground}" />
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MemberImage" TargetType="Image">
+      <Setter Property="Width" Value="{StaticResource MemberImageWidth}" />
+      <Setter Property="Height" Value="{StaticResource MemberImageHeight}" />
+    </Style>
+
+    <Style x:Key="MemberKorName" TargetType="TextBlock">
+      <Setter Property="FontSize" Value="{StaticResource MemberKorNameFontSize}" />
+      <Setter Property="FontWeight" Value="{StaticResource MemberKorNameFontWeight}" />
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberNameHorizontal}" />
+    </Style>
+    
+    <Style x:Key="MemberEngName" TargetType="TextBlock">
+      <Setter Property="FontSize" Value="{StaticResource MemberEngNameFontSize}" />
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberNameHorizontal}" />
+    </Style>
+
+    <Style x:Key="RecommendBorder" TargetType="Border">
+      <Setter Property="BorderBrush" Value="{StaticResource BorderBrushColor}" />
+      <Setter Property="BorderThickness" Value="{StaticResource BorderThickness}" />
+      <Setter Property="Background" Value="{StaticResource MemberRecommendBackground}" />
+    </Style>
+
+    <Style x:Key="Recommend" TargetType="TextBlock">
+      <Setter Property="FontSize" Value="{StaticResource MemberRecommendFontSize}" />
+      <Setter Property="FontWeight" Value="{StaticResource MemberRecommendFontWeight}" />
+      <Setter Property="Foreground" Value="{StaticResource MemberRecommendFontColor}" />
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberRecommendHorizontal}" />
+    </Style>
+
+    <Style x:Key="RecommendCaptain" TargetType="TextBlock">
+      <Setter Property="FontSize" Value="{StaticResource MemberRecommendCaptainFontSize}" />
+      <Setter Property="FontWeight" Value="{StaticResource MemberRecommendCaptainFontWeight}" />
+      <Setter Property="Foreground" Value="{StaticResource MemberRecommendCaptainFontColor}" />
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberRecommendCaptainHorizontal}" />
+    </Style>
+
+    <Style x:Key="RewardBorder" TargetType="Border">
+      <Setter Property="BorderBrush" Value="{StaticResource BorderBrushColor}" />
+      <Setter Property="BorderThickness" Value="{StaticResource BorderThickness}" />
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="True">
+          <Setter Property="Background" Value="{StaticResource MemberRewardHighlightBackground}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="False">
+          <Setter Property="Background" Value="{StaticResource MemberRewardDefaultBackground}" />
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RewardImage" TargetType="Image">
+      <Setter Property="Width" Value="{StaticResource MemberRewardImageWidth}" />
+      <Setter Property="Height" Value="{StaticResource MemberRewardImageHeight}" />
+    </Style>
+
+    <Style x:Key="RewardInfo" TargetType="TextBlock">
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberRewardInfoHorizontal}" />
+      <Setter Property="VerticalAlignment" Value="{StaticResource MemberRewardInfoVertical}" />
+      <Setter Property="TextAlignment" Value="{StaticResource MemberRewardInfoTextAlignment}" />
+      <Setter Property="TextWrapping" Value="{StaticResource MemberRewardInfoTextWrapping}" />
+      <Setter Property="Width" Value="70" />
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="True">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardInfoHighlightFontColor}" />
+          <Setter Property="FontWeight" Value="{StaticResource MemberRewardInfoHighlightFontWeight}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="False">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardInfoDefaultFontColor}" />
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RewardDetailInfo" TargetType="TextBlock">
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberRewardDetailInfoHorizontal}" />
+      <Setter Property="VerticalAlignment" Value="{StaticResource MemberRewardDetailInfoVertical}" />
+      <Setter Property="TextAlignment" Value="{StaticResource MemberRewardDetailInfoTextAlignment}" />
+      <Setter Property="TextWrapping" Value="{StaticResource MemberRewardDetailInfoTextWrapping}" />
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="True">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardDetailInfoHighlightFontColor}" />
+          <Setter Property="FontWeight" Value="{StaticResource MemberRewardDetailInfoHighlightFontWeight}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="False">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardDetailInfoDefaultFontColor}" />
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RewardPriceInfo" TargetType="TextBlock">
+      <Setter Property="HorizontalAlignment" Value="{StaticResource MemberRewardPriceInfoHorizontal}" />
+      <Setter Property="VerticalAlignment" Value="{StaticResource MemberRewardPriceInfoVertical}" />
+      <Setter Property="TextAlignment" Value="{StaticResource MemberRewardPriceInfoTextAlignment}" />
+      <Setter Property="TextWrapping" Value="{StaticResource MemberRewardPriceInfoTextWrapping}" />
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="True">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardPriceInfoHighlightFontColor}" />
+          <Setter Property="FontWeight" Value="{StaticResource MemberRewardPriceInfoHighlightFontWeight}" />
+        </DataTrigger>
+        <DataTrigger Binding="{Binding IsHighlight}" Value="False">
+          <Setter Property="Foreground" Value="{StaticResource MemberRewardPriceInfoDefaultFontColor}" />
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    <!-- Style //-->
+  </UserControl.Resources>
+  <!-- Resources //-->
+
+  
+  <ItemsControl x:Name="MemberItems">
+    <ItemsControl.ItemsPanel>
+      <ItemsPanelTemplate>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <!-- 17 Member Columns -->
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+        </Grid>
+      </ItemsPanelTemplate>
+    </ItemsControl.ItemsPanel>
+
+    <ItemsControl.ItemContainerStyle>
+      <Style>
+        <!-- (ID[0-16] -> Grid.Column) -->
+        <Setter Property="Grid.Column" Value="{Binding ID}" />
+      </Style>
+    </ItemsControl.ItemContainerStyle>
+
+    <ItemsControl.ItemTemplate>
+      <DataTemplate>
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="{StaticResource MemberImageRowHeight}" />
+            <RowDefinition Height="{StaticResource RecommendRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource BetweenMemberAndRewardRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource BetweenRewardsRowHeight}" />
+            
+            <RowDefinition Height="{StaticResource RewardImageRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardInfoRowHeight}" />
+            <RowDefinition Height="{StaticResource RewardPriceRowHeight}" />
+          </Grid.RowDefinitions>
+          
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{StaticResource MemberColWidth}" />
+          </Grid.ColumnDefinitions>
+
+          <!-- 정보 영역 -->
+          <!-- 이미지 / 이름 -->
+          <!-- (Grade -> Background=[First|Second|Third]GradeMemberBackground) -->
+          <Border Grid.Row="0" 
+                  Style="{StaticResource MemberBorder}">
+            <StackPanel VerticalAlignment="Center">
+              <!-- 이미지 -->
+              <!-- (Image=/Resources/~~~.png) -->
+              <Image Source="{Binding Image}" 
+                     Style="{StaticResource MemberImage}" />
+              <!-- 한글 이름 (KorName) -->
+              <TextBlock Text="{Binding KorName}" 
+                         Style="{StaticResource MemberKorName}" />
+              <!-- 영문 이름 (EngName) -->
+              <TextBlock Text="{Binding EngName}" 
+                         Style="{StaticResource MemberEngName}" />
+            </StackPanel>
+          </Border>
+          <!-- 이미지, 이름 //-->
+
+          <!-- 추천 -->
+          <Border Grid.Row="1" 
+                  Style="{StaticResource RecommendBorder}" >
+            <StackPanel VerticalAlignment="Center">
+              <!-- 일반 추천 (Recommend) -->
+              <TextBlock Text="{Binding Recommend}" 
+                         Style="{StaticResource Recommend}" />
+              <!-- 대장 추천 (RecommendCaptain) -->
+              <TextBlock Text="{Binding RecommendCaptain}" 
+                         Style="{StaticResource RecommendCaptain}" />
+            </StackPanel>
+          </Border>
+          <!-- 추천 //-->
+          <!-- 정보 영역 //-->
+
+          <!-- 보상 영역 -->
+          <!-- 수송 (Transportation) -->
+          <!-- 수송 - 이미지 -->
+          <!-- (IsHighlight -> Background=MemberReward[Default|Highlight]Background) -->
+          <!-- (Image=/Resources/~~~-t.png) -->
+          <Border Grid.Row="3" 
+                  DataContext="{Binding Transportation}" 
+                  Style="{StaticResource RewardBorder}">
+            <Image Source="{Binding Image}" 
+                   Style="{StaticResource RewardImage}" />
+          </Border>
+          <!-- 수송 - 기본 정보 -->
+          <!-- (IsHighlight -> Background=MemberReward[Default|Highlight]Background) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfo[Default|Highlight]FontColor) -->
+          <!-- (Info) -->
+          <Border Grid.Row="4" 
+                  DataContext="{Binding Transportation}" 
+                  Style="{StaticResource RewardBorder}">
+            <TextBlock Text="{Binding Info}" 
+                       Style="{StaticResource RewardInfo}" />
+          </Border>
+          <!-- 수송 - 상세, 가격 정보 -->
+          <!-- (IsHighlight -> Background=MemberReward[Default|Highlight]Background) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfo[Default|Highlight]FontColor -->
+          <!-- (DetailInfo) -->
+          <!-- (PriceInfo) -->
+          <Border Grid.Row="5" 
+                  DataContext="{Binding Transportation}" 
+                  Style="{StaticResource RewardBorder}">
+            <StackPanel VerticalAlignment="Center">
+              <TextBlock Text="{Binding DetailInfo}" 
+                         Style="{StaticResource RewardDetailInfo}" />
+              <TextBlock Text="{Binding PriceInfo}" 
+                         Style="{StaticResource RewardPriceInfo}" />
+            </StackPanel>
+          </Border>
+          <!-- 수송 //-->
+
+          <!-- 방어 (Fortification) -->
+          <!-- 방어 - 이미지 -->
+          <!-- (IsHighlight -> Background=MemberReward[Default|Highlight]Background) -->
+          <!-- (Image=/Resources/~~~-f.png) -->
+          <Border Grid.Row="7" 
+                  DataContext="{Binding Fortification}" 
+                  Style="{StaticResource RewardBorder}">
+            <Image Source="{Binding Image}" 
+                   Style="{StaticResource RewardImage}" />
+          </Border>
+          <!-- 방어 - 기본 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (Info) -->
+          <Border Grid.Row="8" 
+                  DataContext="{Binding Fortification}" 
+                  Style="{StaticResource RewardBorder}">
+            <TextBlock Text="{Binding Info}" 
+                       Style="{StaticResource RewardInfo}" />
+          </Border>
+          <!-- 방어 - 상세, 가격 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (DetailInfo) -->
+          <!-- (PriceInfo) -->
+          <Border Grid.Row="9" 
+                  DataContext="{Binding Fortification}" 
+                  Style="{StaticResource RewardBorder}">
+            <StackPanel VerticalAlignment="Center">
+              <TextBlock Text="{Binding DetailInfo}" 
+                         Style="{StaticResource RewardDetailInfo}" />
+              <TextBlock Text="{Binding PriceInfo}" 
+                         Style="{StaticResource RewardPriceInfo}" />
+            </StackPanel>
+          </Border>
+          <!-- 방어 //-->
+
+          <!-- 연구 (Research) -->
+          <!-- 연구 - 이미지 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (Image=/Resources/~~~-r.png) -->
+          <Border Grid.Row="11" 
+                  DataContext="{Binding Research}" 
+                  Style="{StaticResource RewardBorder}">
+            <Image Source="{Binding Image}" 
+                   Style="{StaticResource RewardImage}" />
+          </Border>
+          <!-- 연구 - 기본 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (Info) -->
+          <Border Grid.Row="12" 
+                  DataContext="{Binding Research}" 
+                  Style="{StaticResource RewardBorder}">
+            <TextBlock Text="{Binding Info}" 
+                       Style="{StaticResource RewardInfo}" />
+          </Border>
+          <!-- 연구 - 상세, 가격 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (DetailInfo) -->
+          <!-- (PriceInfo) -->
+          <Border Grid.Row="13" 
+                  DataContext="{Binding Research}" 
+                  Style="{StaticResource RewardBorder}">
+            <StackPanel VerticalAlignment="Center">
+              <TextBlock Text="{Binding DetailInfo}" 
+                         Style="{StaticResource RewardDetailInfo}" />
+              <TextBlock Text="{Binding PriceInfo}" 
+                         Style="{StaticResource RewardPriceInfo}" />
+            </StackPanel>
+          </Border>
+          <!-- 연구 //-->
+
+          <!-- 조정 (Intervention) -->
+          <!-- 조정 - 이미지 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (Image=/Resources/~~~-i.png) -->
+          <Border Grid.Row="15" 
+                  DataContext="{Binding Intervention}" 
+                  Style="{StaticResource RewardBorder}">
+            <Image Source="{Binding Image}" 
+                   Style="{StaticResource RewardImage}" />
+          </Border>
+          <!-- 조정 - 기본 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (Info) -->
+          <Border Grid.Row="16" 
+                  DataContext="{Binding Intervention}" 
+                  Style="{StaticResource RewardBorder}">
+            <TextBlock Text="{Binding Info}" 
+                       Style="{StaticResource RewardInfo}" />
+          </Border>
+          <!-- 조정 - 상세, 가격 정보 -->
+          <!-- (IsHighlight -> Background=MemberRewardDefaultBackground|MemberRewardHighlightBackground) -->
+          <!-- (IsHighlight -> FontColor=MemberRewardInfoDefaultFontColor|MemberRewardInfoHighlightFontColor) -->
+          <!-- (DetailInfo) -->
+          <!-- (PriceInfo) -->
+          <Border Grid.Row="17" 
+                  DataContext="{Binding Intervention}" 
+                  Style="{StaticResource RewardBorder}">
+            <StackPanel VerticalAlignment="Center">
+              <TextBlock Text="{Binding DetailInfo}" 
+                         Style="{StaticResource RewardDetailInfo}" />
+              <TextBlock Text="{Binding PriceInfo}" 
+                         Style="{StaticResource RewardPriceInfo}" />
+            </StackPanel>
+          </Border>
+          <!-- 조정 //-->
+        </Grid>
+      </DataTemplate>
+    </ItemsControl.ItemTemplate>
+  </ItemsControl>
+
+</UserControl>

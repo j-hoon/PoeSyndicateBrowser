@@ -14,6 +14,9 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>게시\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,11 +29,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +41,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,20 +54,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>packages\CommonServiceLocator.2.0.4\lib\net46\CommonServiceLocator.dll</HintPath>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
-      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
-      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
-    </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
-      <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -87,9 +79,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\TestModel.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\MemberControl.xaml.cs">
+      <DependentUpon>MemberControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,6 +94,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ResourceDictionaries\Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MemberControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -121,6 +121,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Json\member.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,7 +146,259 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\" />
+    <Resource Include="Resources\it-that-fled-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aisling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cameria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elreon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gravicius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\haku.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hillock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\it-that-fled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\janus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jorgin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\korell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\leo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\riker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vagan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vorici.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vorici-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vorici-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vorici-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\it-that-fled-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\it-that-fled-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\it-that-fled-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tora-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tora-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tora-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tora-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rin-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rin-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rin-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rin-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cameria-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cameria-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cameria-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cameria-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vagan-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vagan-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vagan-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vagan-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\vorici-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aisling-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aisling-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aisling-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\aisling-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\janus-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\janus-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\janus-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\janus-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jorgin-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jorgin-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jorgin-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\jorgin-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\korell-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\korell-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\korell-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\korell-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\leo-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\leo-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\leo-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\leo-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gravicius-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gravicius-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gravicius-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gravicius-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hillock-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hillock-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hillock-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hillock-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\riker-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\riker-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\riker-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\riker-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\haku-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\haku-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\haku-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\haku-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guff-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guff-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guff-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guff-t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elreon-f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elreon-i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elreon-r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\elreon-t.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\ShowMeTheXAML.MSBuild.1.0.12\build\net45\ShowMeTheXAML.MSBuild.targets" Condition="Exists('packages\ShowMeTheXAML.MSBuild.1.0.12\build\net45\ShowMeTheXAML.MSBuild.targets')" />
