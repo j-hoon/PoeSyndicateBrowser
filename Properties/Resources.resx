@@ -148,6 +148,22 @@
   <data name="cameria_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cameria-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="CurrencyRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/currencyoverview?type=Currency&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
+  <data name="DivinationCard" xml:space="preserve">
+    <value>DivinationCard</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="DivinationCardRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=DivinationCard&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
   <data name="elreon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elreon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,6 +178,30 @@
   </data>
   <data name="elreon_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elreon-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Essence" xml:space="preserve">
+    <value>Essence</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="EssenceRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=Essence&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>Fossil</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="FossilRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=Fossil&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
+  <data name="Fragment" xml:space="preserve">
+    <value>Fragment</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="FragmentRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/currencyoverview?type=Fragment&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
   </data>
   <data name="gravicius" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gravicius.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +262,14 @@
   </data>
   <data name="hillock_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hillock-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Incubator" xml:space="preserve">
+    <value>Incubator</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="IncubatorRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=Incubator&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
   </data>
   <data name="it_that_fled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\it-that-fled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,6 +346,26 @@
   <data name="leo_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leo-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="MapRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=Map&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
+  <data name="MemberImagePath" xml:space="preserve">
+    <value>/Resources/</value>
+    <comment>멤버 이미지 파일 경로</comment>
+  </data>
+  <data name="MemberJsonPath" xml:space="preserve">
+    <value>Json/member.json</value>
+    <comment>멤버 Json 파일 경로</comment>
+  </data>
+  <data name="RewardImagePath" xml:space="preserve">
+    <value>/Resources/</value>
+    <comment>보상 이미지 파일 경로</comment>
+  </data>
   <data name="riker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\riker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -328,6 +396,18 @@
   <data name="rin_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rin-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Scarab" xml:space="preserve">
+    <value>Scarab</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="ScarabRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=Scarab&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
+  </data>
+  <data name="SkillGemRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=SkillGem&amp;league=</value>
+    <comment>(보류) - Rest 호출 URL</comment>
+  </data>
   <data name="tora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -342,6 +422,14 @@
   </data>
   <data name="tora_t" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tora-t.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UniqueMap" xml:space="preserve">
+    <value>UniqueMap</value>
+    <comment>RewardType.Type</comment>
+  </data>
+  <data name="UniqueMapRestUrl" xml:space="preserve">
+    <value>https://poe.ninja/api/data/itemoverview?type=UniqueMap&amp;league=</value>
+    <comment>Rest 호출 URL</comment>
   </data>
   <data name="vagan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vagan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -35,7 +35,7 @@
         "image": "vorici-r.png",
         "info": "흰색 소켓",
         "detailInfo": "",
-        "detailFlag": 1,
+        "detailFlag": -1,
         "detailType": "WhiteSocketItem",
         "detailItems": []
       },
@@ -66,8 +66,8 @@
         "image": "it-that-fled-t.png",
         "info": "균열 조각",
         "detailInfo": "조각 1/2/3/4",
-        "detailFlag": 2,
-        "detailType": "Currency",
+        "detailFlag": 3,
+        "detailType": "Fragment",
         "detailItems": [
           "Splinter of Chayula",
           "Splinter of Uul-Netol",

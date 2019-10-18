@@ -161,6 +161,42 @@ namespace PoeSyndicateBrowser.Properties {
         }
         
         /// <summary>
+        ///   Currency과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/currencyoverview?type=Currency&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string CurrencyRestUrl {
+            get {
+                return ResourceManager.GetString("CurrencyRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   DivinationCard과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string DivinationCard {
+            get {
+                return ResourceManager.GetString("DivinationCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=DivinationCard&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string DivinationCardRestUrl {
+            get {
+                return ResourceManager.GetString("DivinationCardRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap elreon {
@@ -207,6 +243,60 @@ namespace PoeSyndicateBrowser.Properties {
             get {
                 object obj = ResourceManager.GetObject("elreon_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Essence과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Essence {
+            get {
+                return ResourceManager.GetString("Essence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=Essence&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string EssenceRestUrl {
+            get {
+                return ResourceManager.GetString("EssenceRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Fossil과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Fossil {
+            get {
+                return ResourceManager.GetString("Fossil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=Fossil&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string FossilRestUrl {
+            get {
+                return ResourceManager.GetString("FossilRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Fragment과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Fragment {
+            get {
+                return ResourceManager.GetString("Fragment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/currencyoverview?type=Fragment&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string FragmentRestUrl {
+            get {
+                return ResourceManager.GetString("FragmentRestUrl", resourceCulture);
             }
         }
         
@@ -407,6 +497,24 @@ namespace PoeSyndicateBrowser.Properties {
             get {
                 object obj = ResourceManager.GetObject("hillock_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Incubator과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Incubator {
+            get {
+                return ResourceManager.GetString("Incubator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=Incubator&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string IncubatorRestUrl {
+            get {
+                return ResourceManager.GetString("IncubatorRestUrl", resourceCulture);
             }
         }
         
@@ -661,6 +769,51 @@ namespace PoeSyndicateBrowser.Properties {
         }
         
         /// <summary>
+        ///   Map과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=Map&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string MapRestUrl {
+            get {
+                return ResourceManager.GetString("MapRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   /Resources/과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string MemberImagePath {
+            get {
+                return ResourceManager.GetString("MemberImagePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Json/member.json과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string MemberJsonPath {
+            get {
+                return ResourceManager.GetString("MemberJsonPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   /Resources/과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string RewardImagePath {
+            get {
+                return ResourceManager.GetString("RewardImagePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap riker {
@@ -761,6 +914,33 @@ namespace PoeSyndicateBrowser.Properties {
         }
         
         /// <summary>
+        ///   Scarab과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Scarab {
+            get {
+                return ResourceManager.GetString("Scarab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=Scarab&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string ScarabRestUrl {
+            get {
+                return ResourceManager.GetString("ScarabRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=SkillGem&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string SkillGemRestUrl {
+            get {
+                return ResourceManager.GetString("SkillGemRestUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
         internal static System.Drawing.Bitmap tora {
@@ -807,6 +987,24 @@ namespace PoeSyndicateBrowser.Properties {
             get {
                 object obj = ResourceManager.GetObject("tora_t", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   UniqueMap과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string UniqueMap {
+            get {
+                return ResourceManager.GetString("UniqueMap", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   https://poe.ninja/api/data/itemoverview?type=UniqueMap&amp;league=과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string UniqueMapRestUrl {
+            get {
+                return ResourceManager.GetString("UniqueMapRestUrl", resourceCulture);
             }
         }
         

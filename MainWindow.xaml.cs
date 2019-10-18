@@ -34,11 +34,11 @@ namespace PoeSyndicateBrowser
             TestButton.Click += TestButtonClick;
         }
 
-        private void TestButtonClick(object sender, RoutedEventArgs e)
+        private async void TestButtonClick(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("- TestButtonClick()");
 
-            MemberControl.TestConnection();
+            await MemberControl.TestConnectionAsync();
         }
 
     }
